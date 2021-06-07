@@ -2,9 +2,7 @@ import { createRestaurantItemTemplate } from '../views/templates/template-restau
 
 const RestaurantInitiator = {
   init() {
-    document.addEventListener('DOMContentLoaded', () => {
-      this._render();
-    });
+    this._renderComponent();
   },
 
   _loadJSON(url, callback) {
@@ -20,7 +18,7 @@ const RestaurantInitiator = {
     xobj.send(null);
   },
 
-  _render() {
+  _renderComponent() {
     this._loadJSON('data/restaurants.json', (res) => {
       const { restaurants } = JSON.parse(res);
 

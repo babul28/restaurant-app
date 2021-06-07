@@ -6,8 +6,13 @@ import App from './views/app';
 const app = new App({
   button: document.querySelector('#menu'),
   drawer: document.querySelector('#drawer'),
-  hero: document.querySelector('.hero'),
   content: document.querySelector('#main'),
 });
 
-app.renderPage();
+window.addEventListener('hashchange', () => {
+  app.renderPage();
+});
+
+window.addEventListener('load', () => {
+  app.renderPage();
+});

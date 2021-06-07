@@ -1,14 +1,13 @@
 import DrawerInitiator from '../utils/drawer_initiator';
-import HeroInitiator from '../utils/hero_initiator';
-import RestaurantInitiator from '../utils/restaurant_initiator';
+import routes from '../routes/routes';
+import UrlParser from '../routes/url-parser';
 
 class App {
   constructor({
-    button, drawer, hero, content,
+    button, drawer, content,
   }) {
     this._button = button;
     this._drawer = drawer;
-    this._hero = hero;
     this._content = content;
 
     this._initialAppShell();
@@ -18,15 +17,15 @@ class App {
     DrawerInitiator.init({
       button: this._button,
       drawer: this._drawer,
-      hero: this._hero,
       content: this._content,
     });
-
-    HeroInitiator.init();
   }
 
   async renderPage() {
-    RestaurantInitiator.init();
+    const url = UrlParser.parseActiveUrlWithCombiner();
+    const page = routes[url];
+    this._content.innerHTML = await page.render();
+    await page.afterRender();
   }
 }
 

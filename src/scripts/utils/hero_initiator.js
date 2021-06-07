@@ -1,5 +1,15 @@
+import { createHeroMainPageTemplate } from '../views/templates/template-hero';
+
 const HeroInitiator = {
-  init() {
+  async init({ heroContainer }) {
+    this._heroContainer = heroContainer;
+
+    await this._renderHero();
+  },
+
+  async _renderHero() {
+    this._heroContainer.innerHTML = createHeroMainPageTemplate();
+
     this._changeHeroHeight();
 
     document.querySelector('.hero__action').addEventListener('click', (event) => {
