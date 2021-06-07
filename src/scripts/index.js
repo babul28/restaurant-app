@@ -1,14 +1,14 @@
 import 'regenerator-runtime'; /* for async await transpile */
 import '../styles/main.css';
+import '../styles/responsive.css';
 
 document.addEventListener('DOMContentLoaded', () => {
   function loadJSON(url, callback) {
     const xobj = new XMLHttpRequest();
     xobj.overrideMimeType('application/json');
     xobj.open('GET', url, true); // Replace 'my_data' with the path to your file
-    xobj.onreadystatechange = function () {
-      if (xobj.readyState == 4 && xobj.status == '200') {
-        // Required use of an anonymous callback as .open will NOT return a value but simply returns undefined in asynchronous mode
+    xobj.onreadystatechange = () => {
+      if (xobj.readyState === 4 && xobj.status === 200) {
         callback(xobj.responseText);
       }
     };
@@ -29,7 +29,7 @@ document.addEventListener('DOMContentLoaded', () => {
   loadJSON('data/restaurants.json', (res) => {
     const { restaurants } = JSON.parse(res);
 
-    let restaurantsEl = ``;
+    let restaurantsEl = '';
 
     restaurants.forEach((item) => {
       restaurantsEl += `
