@@ -1,5 +1,6 @@
-import RestaurantInitiator from '../../utils/restaurant_initiator';
 import HeroInitiator from '../../utils/hero_initiator';
+import RestaurantApiSource from '../../data/restaurantapi-source';
+import { createRestaurantItemTemplate } from '../templates/template-restaurant';
 
 const Home = {
   async render() {
@@ -17,8 +18,14 @@ const Home = {
   },
 
   async afterRender() {
-    RestaurantInitiator.init();
     HeroInitiator.init({ heroContainer: document.querySelector('.hero__inner') });
+
+    const restaurants = await RestaurantApiSource.getAllRestaurants();
+    const restaurantContainer = document.querySelector('.top-restaurants');
+
+    restaurants.forEach((restaurant) => {
+      restaurantContainer.innerHTML += createRestaurantItemTemplate(restaurant);
+    });
   },
 };
 

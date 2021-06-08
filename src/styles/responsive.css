@@ -56,6 +56,19 @@
     align-items: center;
     margin: 0 auto;
   }
+
+  .restaurant__detail {
+    display: flex;
+  }
+
+  .restaurant__detail > div:not(:first-child) {
+    margin-left: 1.5rem;
+  }
+
+  .restaurant__poster_container {
+    margin-top: 2.7rem;
+    min-width: 50%;
+  }
 }
 
 @media screen and (min-width: 1024px) {
@@ -79,10 +92,22 @@
   .hero__action {
     padding: 1em 2em;
   }
+
+  .restaurant__detail > div:not(:first-child) {
+    margin-left: 1.8rem;
+  }
+
+  .restaurant__poster_container {
+    min-width: 55%;
+  }
 }
 
 @media screen and (min-width: 1440px) {
   .container {
     max-width: 1028px;
+  }
+
+  .restaurant__poster_container {
+    min-width: 58%;
   }
 }
