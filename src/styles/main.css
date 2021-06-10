@@ -12,6 +12,7 @@ body {
 
 main {
   min-height: calc(100vh - 150px);
+  position: relative;
 }
 
 .skip-link {
@@ -237,8 +238,7 @@ header {
 }
 
 .restaurant {
-  margin: 2rem 0;
-  padding: 0 2rem;
+  padding: 2rem;
 }
 
 .restaurant__detail,

@@ -2,6 +2,7 @@ import RestaurantApiSource from '../../data/restaurantapi-source';
 import UrlParser from '../../routes/url-parser';
 import FavoriteRestaurantInitiator from '../../utils/favorit-restaurant-initiator';
 import ReviewFormInitiator from '../../utils/review-form-initiator';
+import SpinnerInitiator from '../../utils/spinner-initiator';
 import { createRestaurantDetailTemplate } from '../templates/template-restaurant';
 
 const Detail = {
@@ -15,11 +16,15 @@ const Detail = {
   },
 
   async afterRender() {
+    SpinnerInitiator.init({ spinerContainer: document.querySelector('main') });
+
     const url = UrlParser.parseActiveUrlWithoutCombiner();
     const restaurant = await RestaurantApiSource.findRestaurantById(url.id);
-    const restaurantContainer = document.querySelector('#restaurant');
 
+    const restaurantContainer = document.querySelector('#restaurant');
     restaurantContainer.innerHTML = createRestaurantDetailTemplate(restaurant);
+
+    SpinnerInitiator.remove();
 
     ReviewFormInitiator.init({
       id: url.id,
