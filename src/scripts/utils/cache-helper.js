@@ -17,8 +17,10 @@ const CacheHelper = {
     const response = await caches.match(request);
 
     if (response) {
+      this._fetchRequest(request);
       return response;
     }
+
     return this._fetchRequest(request);
   },
 
