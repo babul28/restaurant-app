@@ -9,7 +9,7 @@ const Home = {
         <div class="hero__inner"></div>
       </div>
       <div class="container">
-          <section class="content">
+          <section class="content" id="main-content">
               <h2 id="recomendation" class="content__label">Explore Restaurant</h2>
               <div class="top-restaurants"></div>
           </section>
