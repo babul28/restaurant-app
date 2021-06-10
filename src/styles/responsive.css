@@ -30,7 +30,8 @@
     text-align: center;
   }
 
-  .top-restaurants {
+  .top-restaurants,
+  .favorite-restaurants {
     grid-template-columns: repeat(2, 1fr);
     gap: 16px;
   }
@@ -81,7 +82,8 @@
     max-width: 768px;
   }
 
-  .top-restaurants {
+  .top-restaurants,
+  .favorite-restaurants {
     grid-template-columns: repeat(3, 1fr);
   }
 

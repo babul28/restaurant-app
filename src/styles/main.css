@@ -157,7 +157,8 @@ body {
   text-align: center;
 }
 
-.top-restaurants {
+.top-restaurants,
+.favorite-restaurants {
   display: grid;
   grid-row-gap: 16px;
 }

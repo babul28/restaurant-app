@@ -1,3 +1,6 @@
+import FavoriteRestaurantIdb from '../../data/favorite-restaurant-idb';
+import { createRestaurantItemTemplate } from '../templates/template-restaurant';
+
 const Favorite = {
   async render() {
     return `
@@ -11,7 +14,12 @@ const Favorite = {
   },
 
   async afterRender() {
-    //
+    const favoriteRestaurants = await FavoriteRestaurantIdb.getAllRestaurants();
+    const restaurantContainer = document.querySelector('.favorite-restaurants');
+
+    favoriteRestaurants.forEach((favoriteRestaurant) => {
+      restaurantContainer.innerHTML += createRestaurantItemTemplate(favoriteRestaurant);
+    });
   },
 };
 
