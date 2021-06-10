@@ -3,9 +3,19 @@
     display: none;
   }
 
-  .header {
+  main {
+    min-height: calc(100vh - 165px);
+  }
+
+  header {
     position: sticky;
     z-index: 1000;
+  }
+
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
   }
 
   .header__inner {
@@ -52,9 +62,6 @@
   }
 
   .container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
     margin: 0 auto;
   }
 

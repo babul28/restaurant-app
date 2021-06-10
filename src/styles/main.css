@@ -10,6 +10,10 @@ body {
   color: #424242;
 }
 
+main {
+  min-height: calc(100vh - 150px);
+}
+
 .skip-link {
   position: fixed;
   top: -40px;
@@ -25,7 +29,7 @@ body {
   top: 100px;
 }
 
-.header {
+header {
   min-height: 65px;
   position: sticky;
   top: 0;
@@ -328,6 +332,12 @@ body {
   margin-left: 1rem;
 }
 
+.restaurant-item__empty {
+  text-align: center;
+  font-size: 1rem;
+  font-weight: 600;
+}
+
 .review__avatar {
   max-width: 64px;
 }
@@ -372,9 +382,16 @@ body {
   border-radius: 5px;
   border: 1px solid #b9b9b9;
   outline: none;
-  margin-bottom: 1rem;
   word-spacing: normal;
   letter-spacing: normal;
+}
+
+.error {
+  border-color: red;
+}
+
+.show {
+  display: block !important;
 }
 
 .restaurant_review_button {
@@ -388,6 +405,18 @@ body {
   background-color: #39a6a3;
   color: #ffffff;
   border: none;
+}
+
+.form-group {
+  margin-bottom: 1rem;
+}
+
+.form-group > span {
+  margin-top: 0.25rem;
+  font-size: 0.7rem;
+  font-weight: 600;
+  color: red;
+  display: none;
 }
 
 .restaurant_review_button:hover {

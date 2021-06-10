@@ -54,9 +54,15 @@ const _createReviewsComponent = (reviews) => `
 
 const createReviewFormComponent = (id) => `
     <form id="${id}">
-        <input id="review_name" type="text" class="restaurant__input" placeholder="Your Name" />
-        <textarea id="review_content" cols="30" rows="10" class="restaurant__textarea" placeholder="What you think about this menu?"></textarea>
-        <div class="flex justify-end">
+        <div class="form-group">
+            <input id="review_name" type="text" class="restaurant__input" placeholder="Your Name" />
+            <span class="review_name_error"></span>
+        </div>
+        <div class="form-group">
+            <textarea id="review_content" cols="30" rows="10" class="restaurant__textarea" placeholder="What you think about this menu?"></textarea>
+            <span class="review_content_error"></span>
+        </div>
+        <div class="flex justify-end items-center">
             <button type="submit" class="restaurant_review_button">Submit</button>
         </div>
     </form>
@@ -76,6 +82,10 @@ const createRestaurantItemTemplate = (restaurant) => `
             <p class="top-restaurant-item__description">${restaurant.description}</p>
         </div>
     </article>
+`;
+
+const createEmptyRestaurantListTemplate = () => `
+    <div class="restaurant-item__empty">Anda belum memiliki restoran favorit</div>
 `;
 
 const createRestaurantDetailTemplate = (restaurant) => `
@@ -108,4 +118,5 @@ export {
   createRestaurantDetailTemplate,
   createReviewComponent,
   createReviewFormComponent,
+  createEmptyRestaurantListTemplate,
 };

@@ -4,7 +4,7 @@ const HeroInitiator = {
   async init({ heroContainer }) {
     this._heroContainer = heroContainer;
 
-    await this._renderHero();
+    this._renderHero();
   },
 
   async _renderHero() {
@@ -34,9 +34,12 @@ const HeroInitiator = {
   },
 
   _changeHeroHeight() {
-    const headerSize = document.querySelector('.header').getBoundingClientRect().height;
+    const headerEl = document.querySelector('.header');
+    if (headerEl) {
+      const headerSize = headerEl.getBoundingClientRect().height;
 
-    document.querySelector('.hero').style.height = `calc(100vh - ${headerSize}px)`;
+      document.querySelector('.hero').style.height = `calc(100vh - ${headerSize}px)`;
+    }
   },
 };
 
