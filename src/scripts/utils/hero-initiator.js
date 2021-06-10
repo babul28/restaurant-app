@@ -1,4 +1,4 @@
-import { createHeroMainPageTemplate } from '../views/templates/template-hero';
+import createHeroMainPageTemplate from '../views/templates/template-hero';
 
 const HeroInitiator = {
   async init({ heroContainer }) {

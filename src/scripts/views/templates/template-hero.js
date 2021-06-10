@@ -5,4 +5,4 @@ const createHeroMainPageTemplate = () => `
         <a href="#recomendation" class="hero__action">Lihat Sekarang</a>
     `;
 
-export { createHeroMainPageTemplate };
+export default createHeroMainPageTemplate;
