@@ -1,6 +1,6 @@
 import RestaurantApiSource from '../../data/restaurantapi-source';
 import UrlParser from '../../routes/url-parser';
-import ReviewFormInitiator from '../../utils/review_form_initiator';
+import ReviewFormInitiator from '../../utils/review-form-initiator';
 import { createRestaurantDetailTemplate } from '../templates/template-restaurant';
 
 const Detail = {

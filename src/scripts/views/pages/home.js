@@ -1,4 +1,4 @@
-import HeroInitiator from '../../utils/hero_initiator';
+import HeroInitiator from '../../utils/hero-initiator';
 import RestaurantApiSource from '../../data/restaurantapi-source';
 import { createRestaurantItemTemplate } from '../templates/template-restaurant';
 
