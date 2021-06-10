@@ -3,7 +3,10 @@ const CONFIG = {
   API_TOKEN: '12345',
   IMAGE_BASE_URL: (pictureId) => `https://restaurant-api.dicoding.dev/images/small/${pictureId}`,
   UI_AVATAR: (name) => `https://ui-avatars.com/api/?background=random&name=${name}`,
-  CACHE_NAME: 'MangApp-V1',
+  CACHE_NAME: `MangApp-${new Date().toISOString()}`,
+  DATABASE_NAME: 'mangapp-database',
+  DATABASE_VERSION: 1,
+  OBJECT_STORE_NAME: 'restaurant',
 };
 
 export default CONFIG;

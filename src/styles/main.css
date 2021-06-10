@@ -380,7 +380,8 @@ body {
   cursor: pointer;
   font-size: 0.9rem;
   font-weight: 600;
-  display: inline-block;
+  display: block;
+  width: 100%;
   padding: 0.8rem 4rem;
   border-radius: 5px;
   background-color: #39a6a3;
@@ -400,6 +401,33 @@ body {
   justify-content: flex-end;
 }
 
+/*
+  Favorite
+*/
+
+.favorite {
+  font-size: 28px;
+  position: fixed;
+  bottom: 16px;
+  right: 16px;
+  background-color: #318f8c;
+  color: white;
+  border: 0;
+  border-radius: 50%;
+  width: 55px;
+  height: 55px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.103);
+}
+
+.favorite:hover {
+  background-color: #ffffff;
+  color: #318f8c;
+}
+
 /* Footer */
 
 footer {
@@ -407,5 +435,5 @@ footer {
   padding: 1rem 2em;
   width: 100%;
   text-align: center;
-  box-shadow: 0 -4px 15px 0 rgba(0, 0, 0, 0.05);
+  box-shadow: 0 -4px 15px 0 rgba(0, 0, 0, 0.1);
 }

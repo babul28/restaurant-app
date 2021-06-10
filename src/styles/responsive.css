@@ -69,6 +69,11 @@
     margin-top: 2.7rem;
     min-width: 50%;
   }
+
+  .restaurant_review_button {
+    display: inline-block;
+    width: auto;
+  }
 }
 
 @media screen and (min-width: 1024px) {
