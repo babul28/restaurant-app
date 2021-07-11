@@ -10,6 +10,7 @@ const HeroInitiator = {
   async _renderHero() {
     this._heroContainer.innerHTML = createHeroMainPageTemplate();
 
+    this._responsiveHeroImage();
     this._changeHeroHeight();
 
     document.querySelector('.hero__action').addEventListener('click', (event) => {
@@ -18,6 +19,7 @@ const HeroInitiator = {
 
     window.addEventListener('resize', () => {
       this._changeHeroHeight();
+      this._responsiveHeroImage();
     });
   },
 
@@ -31,6 +33,11 @@ const HeroInitiator = {
       top: pos.top * 1.45,
       behavior: 'smooth',
     });
+  },
+
+  _responsiveHeroImage() {
+    const imageSize = document.body.clientWidth < 800 ? 'small' : 'large';
+    document.querySelector('.hero').style.backgroundImage = `url('/images/heros/hero-image-${imageSize}.jpg')`;
   },
 
   _changeHeroHeight() {
