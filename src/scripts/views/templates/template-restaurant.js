@@ -32,7 +32,7 @@ const _createDrinksComponent = (drinks) => `
 const createReviewComponent = (review) => `
     <div class="restaurant__review">
         <div class="review__avatar">
-            <img src="${CONFIG.UI_AVATAR(review.name)}" alt="${review.name} avatar" />
+            <img data-src="${CONFIG.UI_AVATAR(review.name)}" src="/images/placeholder-image.png" alt="${review.name} avatar" class="lazyload" />
         </div>
         <div class="review__body">
             <p class="review__date">${review.date}</p>
@@ -71,7 +71,7 @@ const createReviewFormComponent = (id) => `
 const createRestaurantItemTemplate = (restaurant) => `
     <article class="top-restaurant-item">
         <div class="top-restaurant-item__thumbnail">
-            <img src="${CONFIG.IMAGE_BASE_URL(restaurant.pictureId)}" alt="${restaurant.name} image" class="top-restaurant-item__thumbnail_image">
+            <img data-src="${CONFIG.IMAGE_BASE_URL(restaurant.pictureId)}" src="/images/placeholder-image.png" alt="${restaurant.name} image" class="top-restaurant-item__thumbnail_image lazyload">
             <div class="top-restaurant-item__thumbnail_label">${restaurant.city}</div>
         </div>
         <div class="top-restaurant-item__content">
@@ -92,7 +92,7 @@ const createRestaurantDetailTemplate = (restaurant) => `
     <h2 class="restaurant__title">${restaurant.name}</h2>
     <div class="restaurant__detail">
         <div class="restaurant__poster_container">
-            <img class="restaurant__poster" src="${CONFIG.IMAGE_BASE_URL(restaurant.pictureId)}" alt="${restaurant.name}" />
+            <img class="restaurant__poster lazyload" data-src="${CONFIG.IMAGE_BASE_URL(restaurant.pictureId)}" src="/images/placeholder-image.png" alt="${restaurant.name}" />
         </div>
         <div class="restaurant__info">
             <h3>Information</h3>
