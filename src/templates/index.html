@@ -1,57 +1,64 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="manifest" href="manifest.json" />
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+    <link rel="apple-touch-icon" sizes="57x57" href="icons/apple-icon-57x57.png" />
+    <link rel="apple-touch-icon" sizes="60x60" href="icons/apple-icon-60x60.png" />
+    <link rel="apple-touch-icon" sizes="72x72" href="icons/apple-icon-72x72.png" />
+    <link rel="apple-touch-icon" sizes="76x76" href="icons/apple-icon-76x76.png" />
+    <link rel="apple-touch-icon" sizes="114x114" href="icons/apple-icon-114x114.png" />
+    <link rel="apple-touch-icon" sizes="120x120" href="icons/apple-icon-120x120.png" />
+    <link rel="apple-touch-icon" sizes="144x144" href="icons/apple-icon-144x144.png" />
+    <link rel="apple-touch-icon" sizes="152x152" href="icons/apple-icon-152x152.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="icons/apple-icon-180x180.png" />
+    <link rel="icon" type="image/png" sizes="192x192" href="icons/android-icon-192x192.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
 
     <title>Restaurant Apps Starter Project</title>
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
-</head>
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+      integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
 
-<body>
-    <a href="#main" class="skip-link">Menuju ke konten</a>
+  <body>
+    <a href="#main-content" class="skip-link">Menuju ke konten</a>
 
-    <header class="header">
-        <div class="container">
-            <div class="header__inner">
-                <h1 class="header__title">Mamen App</h1>
-                <a href="" id="menu" class="header__menu" aria-label="Menu">☰</a>
-            </div>
+    <header>
+      <div class="container">
+        <div class="header">
+          <div class="header__inner">
+            <h1 class="header__title">Mamen App</h1>
+            <a href="" id="menu" class="header__menu" aria-label="Menu">☰</a>
+          </div>
 
-            <nav id="drawer" class="nav">
-                <ul class="nav__list">
-                    <li class="nav__item"><a href="/">Home</a></li>
-                    <li class="nav__item"><a href="#">Favorite</a></li>
-                    <li class="nav__item"><a href="https://github.com/babul28">About Us</a></li>
-                </ul>
-            </nav>
+          <nav id="drawer" class="nav">
+            <ul class="nav__list">
+              <li class="nav__item"><a href="#/">Home</a></li>
+              <li class="nav__item"><a href="#/favorite">Favorite</a></li>
+              <li class="nav__item"><a href="https://github.com/babul28">About Us</a></li>
+            </ul>
+          </nav>
         </div>
+      </div>
     </header>
 
-    <div class="hero">
-        <div class="hero__inner">
-            <h2 class="hero__title">Anda Lapar Tapi Bingung Mau Makan Dimana?</h2>
-            <p class="hero__tagline">Jangan bingung lagi, Mamen Apps akan memberikan rekomendasi restaurant yang wajib
-                Anda coba!</p>
-            <a href="#recomendation" class="hero__action">Lihat Sekarang</a>
-        </div>
-    </div>
+    <main id="main" class="app"></main>
 
-    <main id="main" class="app">
-        <div class="container">
-            <section class="content">
-                <h2 id="recomendation" class="content__label">Explore Restaurant</h2>
-                <div class="top-restaurants"></div>
-            </section>
-        </div>
-    </main>
-
-    <footer>
-        Copyright © 2021 - Mamen Apps
-    </footer>
-</body>
-
+    <footer>Copyright © 2021 - Mamen Apps</footer>
+  </body>
 </html>
