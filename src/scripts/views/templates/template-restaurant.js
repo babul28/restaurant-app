@@ -32,7 +32,7 @@ const _createDrinksComponent = (drinks) => `
 const createReviewComponent = (review) => `
     <div class="restaurant__review">
         <div class="review__avatar">
-            <img data-src="${CONFIG.UI_AVATAR(review.name)}" src="/images/placeholder-image.png" alt="${review.name} avatar" class="lazyload" />
+            <img data-src="${CONFIG.UI_AVATAR(review.name)}" src="/images/placeholder-image-square.png" alt="${review.name} avatar" class="lazyload" />
         </div>
         <div class="review__body">
             <p class="review__date">${review.date}</p>
@@ -79,7 +79,9 @@ const createRestaurantItemTemplate = (restaurant) => `
             <h3 class="top-restaurant-item__title">
                 <a href="/#/detail/${restaurant.id}">${restaurant.name}</a>
             </h3>
-            <p class="top-restaurant-item__description">${restaurant.description}</p>
+            <div class="top-restaurant-item__description-container">
+                <p class="top-restaurant-item__description">${restaurant.description}</p>
+            </div>
         </div>
     </article>
 `;

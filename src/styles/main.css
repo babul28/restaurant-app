@@ -7,6 +7,7 @@
 body {
   font-family: 'Open Sans', sans-serif;
   font-size: 14px;
+  background-color: #ffffff;
   color: #424242;
 }
 
@@ -33,9 +34,9 @@ main {
 header {
   min-height: 65px;
   position: sticky;
-  top: 0;
-  right: 0;
-  left: 0;
+  top: -5px;
+  right: -5px;
+  left: -5px;
   z-index: 10;
   background-color: #ffffff;
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
@@ -88,7 +89,7 @@ header {
 .nav__item a {
   text-decoration: none;
   display: block;
-  color: #616161;
+  color: #424242;
   padding: 0.7rem 1rem;
 }
 
@@ -144,7 +145,7 @@ header {
 }
 
 .hero__action:hover {
-  background-color: #c2c2c2;
+  background-color: #2a857c;
   color: #ffffff;
 }
 
@@ -156,8 +157,8 @@ header {
 }
 
 .content__label {
-  font-size: 32px;
-  font-weight: lighter;
+  font-size: 28px;
+  font-weight: 400;
   margin-bottom: 2rem;
   text-align: center;
 }
@@ -169,7 +170,9 @@ header {
 }
 
 .top-restaurant-item {
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1);
+  background-color: #ffffff;
+  color: #424242;
   width: 100%;
   border-radius: 5px;
   overflow: hidden;
@@ -189,7 +192,6 @@ header {
 }
 
 .top-restaurant-item__thumbnail_label {
-  display: inline-block;
   position: absolute;
   top: 10px;
   left: 0px;
@@ -224,17 +226,14 @@ header {
   min-height: 44px;
 }
 
+.top-restaurant-item__description-container {
+  max-height: calc(1.5rem * 5);
+  overflow: hidden !important;
+}
+
 .top-restaurant-item__description {
   font-size: 1rem;
-
   line-height: 1.5rem;
-  max-height: calc(1.5rem * 5);
-  -webkit-box-orient: vertical;
-  display: block;
-  display: -webkit-box;
-  overflow: hidden !important;
-  text-overflow: ellipsis;
-  -webkit-line-clamp: 5;
 }
 
 .restaurant {
@@ -297,9 +296,9 @@ header {
 .restaurant__categories > .restaurant__category:hover,
 .restaurant__menu_foods > .restaurant__menu_food:hover,
 .restaurant__menu_drinks > .restaurant__menu_drink:hover {
-  background-color: #39a6a3;
+  background-color: #22625c;
   color: #ffffff;
-  border-color: #39a6a3;
+  border-color: #22625c;
 }
 
 .restaurant__categories > .restaurant__category:not(:last-child),
@@ -405,7 +404,7 @@ header {
   min-height: 44px;
   padding: 0.8rem 4rem;
   border-radius: 5px;
-  background-color: #39a6a3;
+  background-color: #22625c;
   color: #ffffff;
   border: none;
 }
@@ -423,7 +422,7 @@ header {
 }
 
 .restaurant_review_button:hover {
-  background-color: #318f8c;
+  background-color: #22625c;
 }
 
 .flex {
@@ -443,7 +442,7 @@ header {
   position: fixed;
   bottom: 16px;
   right: 16px;
-  background-color: #318f8c;
+  background-color: #22625c;
   color: white;
   border: 0;
   border-radius: 50%;
@@ -458,7 +457,7 @@ header {
 
 .favorite:hover {
   background-color: #ffffff;
-  color: #318f8c;
+  color: #22625c;
 }
 
 /* Footer */
