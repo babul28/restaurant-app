@@ -1,6 +1,6 @@
 import RestaurantApiSource from '../../data/restaurantapi-source';
 import UrlParser from '../../routes/url-parser';
-import FavoriteRestaurantInitiator from '../../utils/favorit-restaurant-initiator';
+import FavoriteRestaurantButtonPresenter from '../../utils/favorit-restaurant-button-presenter';
 import ReviewFormInitiator from '../../utils/review-form-initiator';
 import SpinnerInitiator from '../../utils/spinner-initiator';
 import { createRestaurantDetailTemplate } from '../templates/template-restaurant';
@@ -10,7 +10,7 @@ const Detail = {
     return `
       <div class="container">
         <article id="restaurant" class="restaurant"></article>
-        <div id="likeButtonContainer"></div>
+        <div id="favoriteButtonConatiner"></div>
       </div>
       `;
   },
@@ -31,8 +31,8 @@ const Detail = {
       reviewContainer: document.querySelector('.restaurant__reviews_reply'),
     });
 
-    FavoriteRestaurantInitiator.init({
-      favoriteButtonContainer: document.querySelector('#likeButtonContainer'),
+    FavoriteRestaurantButtonPresenter.init({
+      favoriteButtonContainer: document.querySelector('#favoriteButtonConatiner'),
       restaurant: {
         id: restaurant.id,
         name: restaurant.name,
