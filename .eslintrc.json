@@ -14,8 +14,12 @@
         "sourceType": "module"
     },
     "rules": {
+        "import/no-extraneous-dependencies": "off",
         "no-underscore-dangle": "off",
-        "no-restricted-globals": "warn",
-        "no-undef": "off"
+        "no-restricted-globals": "off",
+        "no-undef": "off",
+        "no-prototype-builtins": "off",
+        "no-console": "off",
+        "import/prefer-default-export": "off"
     }
 }
